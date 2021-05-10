@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SalesTax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sales Tax" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Y7-U7-vcD">
+                                <rect key="frame" x="111" y="241" width="222" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="5PO-LP-xCN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwb-Te-6XQ">
+                                <rect key="frame" x="111" y="313" width="222" height="49"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="4ek-Wm-G9m"/>
+                                </constraints>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateTotalPrice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uX0-SZ-FRA"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" minimumFontSize="17" background="dollarsign.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="das-Be-uym">
+                                <rect key="frame" x="111" y="178" width="222" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ePQ-27-mCa"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Sales Tax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijG-qy-IF6">
+                                <rect key="frame" x="127" y="79" width="190" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Y7-U7-vcD" firstAttribute="top" secondItem="das-Be-uym" secondAttribute="bottom" constant="29" id="6DR-5s-2br"/>
+                            <constraint firstItem="das-Be-uym" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="72V-da-tdU"/>
+                            <constraint firstItem="ijG-qy-IF6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="79" id="HoY-se-zJq"/>
+                            <constraint firstItem="das-Be-uym" firstAttribute="leading" secondItem="7Y7-U7-vcD" secondAttribute="leading" id="HpM-e9-Hpa"/>
+                            <constraint firstItem="das-Be-uym" firstAttribute="trailing" secondItem="7Y7-U7-vcD" secondAttribute="trailing" id="Leu-Cn-ngp"/>
+                            <constraint firstItem="Xwb-Te-6XQ" firstAttribute="top" secondItem="7Y7-U7-vcD" secondAttribute="bottom" constant="38" id="O4A-08-EdJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xwb-Te-6XQ" secondAttribute="bottom" constant="374" id="O7e-u5-5Nt"/>
+                            <constraint firstItem="ijG-qy-IF6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="OMQ-Lk-HjN"/>
+                            <constraint firstItem="7Y7-U7-vcD" firstAttribute="trailing" secondItem="Xwb-Te-6XQ" secondAttribute="trailing" id="Txg-1F-zX5"/>
+                            <constraint firstItem="ijG-qy-IF6" firstAttribute="centerX" secondItem="das-Be-uym" secondAttribute="centerX" id="nqd-1h-xzg"/>
+                            <constraint firstItem="7Y7-U7-vcD" firstAttribute="leading" secondItem="Xwb-Te-6XQ" secondAttribute="leading" id="o9z-fI-Pfd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="das-Be-uym" secondAttribute="trailing" constant="81" id="pMa-7f-tqo"/>
+                            <constraint firstItem="das-Be-uym" firstAttribute="top" secondItem="ijG-qy-IF6" secondAttribute="bottom" constant="40" id="wac-Fh-LnV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="priceTxt" destination="das-Be-uym" id="PI9-1a-uaP"/>
+                        <outlet property="salesTaxTxt" destination="7Y7-U7-vcD" id="Yjo-RB-KPI"/>
+                        <outlet property="totalPriceLbl" destination="ijG-qy-IF6" id="HUp-hs-Jxt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="49.553571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
